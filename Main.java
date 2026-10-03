@@ -1,17 +1,17 @@
-import java.util.Scanner;
-
-
 public class Main{
 	private static PasswordGenerator gen;
+	private static Strength str;
 	public static void main(String[] args) {
-		//Scanner input = new Scanner(System.in);
-		//String length = Scanner.nextLine("What is the length of the word you wish to generate");
 		try {
-			gen = new PasswordGenerator(40,35,3,1,1);
+			gen = new PasswordGenerator(2,1,0,1,0);
 		} catch (Exception e){
 			e.printStackTrace();
 		}
 
-		System.out.println(gen.generatePassword());
+		String password = gen.generatePassword();
+		System.out.println(password);
+		Strength str = new Strength(password);
+		String strength = str.evalStrength();
+		System.out.println(strength);
 	}
 }
