@@ -5,7 +5,6 @@ public class Strength{
 	private boolean hasDigits;
 	private String password;
 	private int length;
-	private StrengthCategory finalStrength;
 	private Alphabet alphabet;
 
 	public Strength(String password){
